@@ -1,8 +1,6 @@
 <template>
-  <div class="home">
-    <div class="container">
-      <h1 class="page-title">Home</h1>
-    </div>
+  <div class="entry-game-page">
+    <h1 class="page-title">Entry game</h1>
   </div>
 </template>
 
@@ -10,7 +8,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "HomeView",
+  name: "EntryGameView",
   components: {},
 });
 </script>

@@ -1,0 +1,50 @@
+@use "./vars" as vars;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: vars.$gray-50;
+  color: vars.$gray-700;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: vars.$gray-700;
+
+  &:hover {
+    color: vars.$orange-500;
+  }
+}
+
+.container {
+  padding: 0 16px;
+  margin: 0 auto;
+
+  @media screen and (min-width: vars.$breakpoint-sm-min) {
+    width: 576px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-md-min) {
+    width: 720px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-lg-min) {
+    width: 1280px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-xl-min) {
+    width: 1920px;
+  }
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}

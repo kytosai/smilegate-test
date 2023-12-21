@@ -1,8 +1,6 @@
 <template>
-  <div class="home">
-    <div class="container">
-      <h1 class="page-title">Home</h1>
-    </div>
+  <div class="community-page">
+    <h1 class="page-title">Community</h1>
   </div>
 </template>
 
@@ -10,7 +8,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "HomeView",
+  name: "CommunityView",
   components: {},
 });
 </script>
