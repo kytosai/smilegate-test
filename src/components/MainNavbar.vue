@@ -8,17 +8,36 @@
 
         <div class="menu-bar-desk">
           <template v-for="menuItem in MENU_LIST">
-            <router-link :key="menuItem.id" class="menu-item" :to="menuItem.url">{{
-              menuItem.title
-            }}</router-link>
+            <router-link
+              :key="menuItem.id"
+              class="menu-item"
+              :to="menuItem.url"
+              >{{ menuItem.title }}</router-link
+            >
           </template>
         </div>
 
-        <div class="menu-bar-mobi"></div>
+        <div class="menu-bar-mobi">
+          <button class="menu-btn" @click="handleClickMenuBtn">
+            <template v-if="!isShowCollapseMenu">Open menu</template>
+            <template v-else>Close menu</template>
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="collapse-menu"></div>
+    <div class="collapse-menu" v-if="isShowCollapseMenu">
+      <div class="container">
+        <template v-for="menuItem in MENU_LIST">
+          <router-link
+            :key="menuItem.id"
+            class="menu-item"
+            :to="menuItem.url"
+            >{{ menuItem.title }}</router-link
+          >
+        </template>
+      </div>
+    </div>
   </nav>
 </template>
 
@@ -31,7 +50,13 @@ export default Vue.extend({
   data() {
     return {
       MENU_LIST,
+      isShowCollapseMenu: true,
     };
+  },
+  methods: {
+    handleClickMenuBtn() {
+      this.isShowCollapseMenu = !this.isShowCollapseMenu;
+    },
   },
 });
 </script>
@@ -88,4 +113,40 @@ export default Vue.extend({
     }
   } // .menu-item
 } // .menu-bar-desk
+
+.menu-bar-mobi {
+  margin-left: auto;
+
+  @media screen and (min-width: vars.$breakpoint-lg-min) {
+    display: none;
+  }
+}
+
+.menu-btn {
+  display: inline-flex;
+  border: 1px solid vars.$orange-500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 12px;
+  color: vars.$orange-500;
+  background: transparent;
+}
+
+.collapse-menu {
+  background: #fff;
+
+  @media screen and (min-width: vars.$breakpoint-lg-min) {
+    display: none;
+  }
+
+  .menu-item {
+    display: flex;
+    border-bottom: 1px solid vars.$gray-100;
+    padding: 12px 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
 </style>
