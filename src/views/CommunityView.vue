@@ -1,6 +1,8 @@
 <template>
-  <div class="community-page">
-    <h1 class="page-title">Community</h1>
+  <div class="page community-page">
+    <div class="container">
+      <h1 class="page-title">Community</h1>
+    </div>
   </div>
 </template>
 

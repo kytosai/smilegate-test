@@ -1,6 +1,8 @@
 <template>
-  <div class="indie-game-page">
-    <h1 class="page-title">Indie game</h1>
+  <div class="page indie-game-page">
+    <div class="container">
+      <h1 class="page-title">Indie game</h1>
+    </div>
   </div>
 </template>
 

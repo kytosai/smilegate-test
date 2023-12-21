@@ -11,6 +11,10 @@ body {
     "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   padding-top: 50px;
+
+  &.lock-scroll {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -43,8 +47,12 @@ a {
   }
 }
 
+.page {
+  margin-top: 16px;
+}
+
 .page-title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
 }

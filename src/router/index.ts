@@ -19,13 +19,13 @@ const routes: Array<RouteConfig> = [
     component: IndieGameView,
   },
   {
-    path: "/",
-    name: "home",
+    path: "/entry-game",
+    name: "entryGame",
     component: EntryGameView,
   },
   {
-    path: "/",
-    name: "home",
+    path: "/community",
+    name: "community",
     component: CommunityView,
   },
 ];

@@ -1,6 +1,8 @@
 <template>
-  <div class="entry-game-page">
-    <h1 class="page-title">Entry game</h1>
+  <div class="page entry-game-page">
+    <div class="container">
+      <h1 class="page-title">Entry game</h1>
+    </div>
   </div>
 </template>
 
