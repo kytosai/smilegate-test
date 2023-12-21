@@ -42,6 +42,7 @@ export default Vue.extend({
 .product-list {
   display: grid;
   gap: 24px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 
   @media screen and (min-width: vars.$breakpoint-sm-min) {
     grid-template-columns: repeat(3, minmax(0, 1fr));

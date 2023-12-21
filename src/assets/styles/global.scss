@@ -29,6 +29,7 @@ a {
 .container {
   padding: 0 16px;
   margin: 0 auto;
+  width: 100%;
 
   @media screen and (min-width: vars.$breakpoint-sm-min) {
     width: 576px;
