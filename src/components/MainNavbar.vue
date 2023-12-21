@@ -33,6 +33,7 @@
             :key="menuItem.id"
             class="menu-item"
             :to="menuItem.url"
+            @click="handleClickMobiMenuItem"
             >{{ menuItem.title }}</router-link
           >
         </template>
@@ -50,12 +51,15 @@ export default Vue.extend({
   data() {
     return {
       MENU_LIST,
-      isShowCollapseMenu: true,
+      isShowCollapseMenu: false,
     };
   },
   methods: {
     handleClickMenuBtn() {
       this.isShowCollapseMenu = !this.isShowCollapseMenu;
+    },
+    handleClickMobiMenuItem() {
+      this.isShowCollapseMenu = false;
     },
   },
 });
