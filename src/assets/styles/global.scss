@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
   background: vars.$gray-50;
   color: vars.$gray-700;
@@ -32,19 +36,19 @@ a {
   width: 100%;
 
   @media screen and (min-width: vars.$breakpoint-sm-min) {
-    width: 576px;
+    max-width: 576px;
   }
 
   @media screen and (min-width: vars.$breakpoint-md-min) {
-    width: 720px;
+    max-width: 720px;
   }
 
   @media screen and (min-width: vars.$breakpoint-lg-min) {
-    width: 1280px;
+    max-width: 1280px;
   }
 
   @media screen and (min-width: vars.$breakpoint-xl-min) {
-    width: 1920px;
+    max-width: 1920px;
   }
 }
 

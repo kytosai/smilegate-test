@@ -44,15 +44,15 @@ export default Vue.extend({
   gap: 24px;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 
-  @media screen and (min-width: vars.$breakpoint-sm-min) {
+  @media screen and (min-width: vars.$breakpoint-md-min) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  @media screen and (min-width: vars.$breakpoint-md-min) {
+  @media screen and (min-width: vars.$breakpoint-lg-min) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  @media screen and (min-width: vars.$breakpoint-lg-min) {
+  @media screen and (min-width: vars.$breakpoint-xl-min) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
