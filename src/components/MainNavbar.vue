@@ -81,6 +81,11 @@ export default Vue.extend({
       border-color: lighten(vars.$orange-500, 10%);
       color: lighten(vars.$orange-500, 10%);
     }
+
+    &.router-link-exact-active {
+      background: vars.$orange-500;
+      color: #fff;
+    }
   } // .menu-item
 } // .menu-bar-desk
 </style>
