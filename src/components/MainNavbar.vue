@@ -29,12 +29,11 @@
     <div class="collapse-menu" v-if="isShowCollapseMenu">
       <div class="container">
         <template v-for="menuItem in MENU_LIST">
-          <router-link
+          <a
             :key="menuItem.id"
             class="menu-item"
-            :to="menuItem.url"
-            @click="handleClickMobiMenuItem"
-            >{{ menuItem.title }}</router-link
+            @click="handleClickMobiMenuItem(menuItem.url)"
+            >{{ menuItem.title }}</a
           >
         </template>
       </div>
@@ -58,8 +57,9 @@ export default Vue.extend({
     handleClickMenuBtn() {
       this.isShowCollapseMenu = !this.isShowCollapseMenu;
     },
-    handleClickMobiMenuItem() {
+    handleClickMobiMenuItem(url: string) {
       this.isShowCollapseMenu = false;
+      this.$router.push(url);
     },
   },
 });
